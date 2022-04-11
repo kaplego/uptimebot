@@ -1,0 +1,45 @@
+@import url("style.css");
+html,
+body {
+    background-color: #1d2021;
+}
+
+header {
+    min-height: 225px;
+    max-height: 275px;
+    height: 35vh;
+    background-color: #181a1b;
+}
+
+#header {
+    min-height: 275px;
+    max-height: 325px;
+    height: calc(35vh + 50px);
+    display: flex;
+    flex-direction: column;
+}
+
+#global-s-container {
+    margin: auto;
+    margin-bottom: 0;
+    width: 70vw;
+    min-width: 650px;
+    max-width: 750px;
+    height: 100px;
+    background-color: #1f2224;
+    border-radius: 8px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 32px;
+    padding: .5rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+#global-s-container>#title {
+    margin: 0;
+}
+
+#global-s-container>#title>online {
+    color: green;
+}

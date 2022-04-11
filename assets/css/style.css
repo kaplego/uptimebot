@@ -1,0 +1,9 @@
+@import url("/assets/fonts/Roboto.css");
+body {
+    margin: 0;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
