@@ -1,8 +1,6 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,17 +9,23 @@
 
     <link rel="stylesheet" href="/assets/css/index.css">
 </head>
+
 <body>
     <header>
         <div id="header">
-            <div id="global-s-container">
+            <div id="global-s-container" status="online">
+                <div id="status"></div>
                 <p id="title">
                     <!-- Yes, this is a Subnautica reference -->
-                    Welcome aboard,<br>
-                    All systems <online>online</online>.
+                    Welcome aboard,<br> All systems
+                    <status></status>.
                 </p>
             </div>
         </div>
     </header>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/index.js"></script>
 </body>
+
 </html>

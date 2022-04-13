@@ -1,14 +1,14 @@
 @import url("style.css");
 html,
 body {
-    background-color: #1d2021;
+    background-color: var(--c-dark2);
 }
 
 header {
     min-height: 225px;
     max-height: 275px;
     height: 35vh;
-    background-color: #181a1b;
+    background-color: var(--c-dark1);
 }
 
 #header {
@@ -26,7 +26,7 @@ header {
     min-width: 650px;
     max-width: 750px;
     height: 100px;
-    background-color: #1f2224;
+    background-color: var(--c-dark3);
     border-radius: 8px;
     font-family: 'Roboto';
     font-weight: 700;
@@ -36,10 +36,81 @@ header {
     align-items: center;
 }
 
-#global-s-container>#title {
-    margin: 0;
+#global-s-container>#status {
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    position: relative;
 }
 
-#global-s-container>#title>online {
-    color: green;
+@keyframes status {
+    0% {
+        opacity: .5;
+    }
+    65% {
+        opacity: 0;
+        transform: scale(1.75);
+    }
+    97% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    100% {
+        opacity: .5;
+    }
+}
+
+#global-s-container>#status:after {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+    opacity: .5;
+    border-radius: 100vw;
+    animation: status 2s linear infinite;
+    position: absolute;
+}
+
+#global-s-container[status="online"]>#status,
+#global-s-container[status="online"]>#status:after {
+    background-color: var(--c-green);
+}
+
+#global-s-container[status="partial"]>#status,
+#global-s-container[status="partial"]>#status:after {
+    background-color: var(--c-orange);
+}
+
+#global-s-container[status="offline"]>#status {
+    background-color: var(--c-red);
+}
+
+#global-s-container[status="unknown"]>#status {
+    background-color: var(--c-unknown);
+}
+
+#global-s-container[status="offline"]>#status:after,
+#global-s-container[status="unknown"]>#status:after {
+    visibility: hidden;
+}
+
+#global-s-container>#title {
+    margin: 0;
+    margin-left: 1.5rem;
+}
+
+#global-s-container[status="online"]>#title>status {
+    color: var(--c-green);
+}
+
+#global-s-container[status="offline"]>#title>status {
+    color: var(--c-red);
+}
+
+#global-s-container[status="partial"]>#title>status {
+    color: var(--c-orange);
+}
+
+#global-s-container[status="unknown"]>#title>status {
+    color: var(--c-unknown);
 }
