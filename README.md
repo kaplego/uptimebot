@@ -1,6 +1,8 @@
 # Uptime Bot
 UpTimeBot is a website template for a status page.
 
+<img src="/assets/images/screenshot.png" alt="Screenshot" width="600">
+
 ## Installation
 
 ### Install Uptime Bot
