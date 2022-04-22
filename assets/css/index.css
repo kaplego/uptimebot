@@ -19,6 +19,31 @@ header {
     flex-direction: column;
 }
 
+#header>#logo {
+    height: 65px;
+    width: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+    margin-top: auto;
+}
+
+#header>#separator {
+    width: 50px;
+    border: #808080 solid 1px;
+    border-radius: 1px;
+}
+
+#header>#name {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 4px;
+    font-size: 1.5rem;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
 #global-s-container {
     margin: auto;
     margin-bottom: 0;

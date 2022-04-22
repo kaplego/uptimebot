@@ -6,6 +6,11 @@ ws.onopen = async function() {
     // }, 5000));
 }
 
+ws.onclose = function() {
+    $('#global-s-container').attr("status", "unknown");
+    $('#global-s-container>#title').html("Welcome aboard,<br> Status is <status>unknown</status>.");
+}
+
 /**
  * @param {{
  *  data: Blob
