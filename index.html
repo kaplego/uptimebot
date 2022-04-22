@@ -13,18 +13,22 @@
 <body>
     <header>
         <div id="header">
-            <div id="global-s-container" status="online">
+            <div id="global-s-container" status="unknown">
                 <div id="status"></div>
                 <p id="title">
                     <!-- Yes, this is a Subnautica reference -->
                     Welcome aboard,<br> All systems
                     <status></status>.
                 </p>
+                <div id="lastupdate">Last updated <time id="lastupdated" type="T"></time><br>Next update <time id="nextupdate" type="R"></time></div>
             </div>
         </div>
     </header>
+    <div id="s-container"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/defs.js"></script>
+    <script src="/assets/js/websocket.js"></script>
     <script src="/assets/js/index.js"></script>
 </body>
 
