@@ -31,7 +31,7 @@ const services = {
     }
 }
 ```
-You can edit this template service, and custmize it as you want, and duplicate it for all the services you need.
+You can edit this template service, and customize it as you want, and duplicate it for all the services you need.
 
 ## Start websocket
 If you have properly installed Node.JS, you can now start the websocket. Go to the folder you moved before, and open the commands terminal. Write `node index` and press Enter. Now your websocket is successfully online.
