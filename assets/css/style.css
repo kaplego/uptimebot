@@ -1,0 +1,19 @@
+@import url("/assets/fonts/Roboto.css");
+:root {
+    --c-dark1: #1c1b22;
+    --c-dark2: #2b2a33;
+    --c-dark3: #42414d;
+    --c-green: #33CC33;
+    --c-red: #FF3B11;
+    --c-orange: #F19128;
+    --c-unknown: #949494;
+}
+
+body {
+    margin: 0;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
