@@ -34,6 +34,7 @@ header {
     padding: .5rem 1.5rem;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 #global-s-container>#status {
@@ -113,4 +114,102 @@ header {
 
 #global-s-container[status="unknown"]>#title>status {
     color: var(--c-unknown);
+}
+
+#global-s-container>#lastupdate {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    color: rgba(255, 255, 255, .5);
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: .5rem;
+    text-align: right;
+}
+
+#s-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 1rem;
+}
+
+#s-container>.status:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#s-container>.status:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#s-container>.status:not(:last-child) {
+    border-bottom: 1px solid var(--c-dark3);
+}
+
+#s-container>.status {
+    display: flex;
+    flex-direction: row;
+    width: 70vw;
+    min-width: 650px;
+    max-width: 750px;
+    background-color: var(--c-dark5);
+    padding: 6px 8px;
+}
+
+#s-container>.status>p {
+    margin: 0;
+}
+
+#s-container>.status>.up {
+    margin-left: 4px;
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: var(--c-unknown);
+    transform: translateY(1px);
+}
+
+#s-container>.status>.uptext {
+    margin-left: 4px;
+    color: var(--c-unknown);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#s-container>.status>.time {
+    margin-left: auto;
+    display: none;
+    color: var(--c-unknown);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#s-container>.status[status="online"]>.up {
+    background-color: var(--c-green);
+}
+
+#s-container>.status[status="online"]>.uptext {
+    color: var(--c-green);
+}
+
+#s-container>.status[status="online"]>.time {
+    display: block;
+}
+
+#s-container>.status[status="offline"]>.up {
+    background-color: var(--c-red);
+}
+
+#s-container>.status[status="offline"]>.uptext {
+    color: var(--c-red);
 }
