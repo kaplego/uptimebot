@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "ignoreDeprecations": "5.0",
+        "target": "ES2020",
+        "module": "CommonJS",
+        "rootDir": "./source",
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "outDir": "out",
+        "inlineSources": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": false,
+        "skipLibCheck": true,
+        "importsNotUsedAsValues": "error",
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
